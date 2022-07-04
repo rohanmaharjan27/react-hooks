@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ExampleUseState from './Hooks/ExampleUseState';
+import ExampleUseEffect from './Hooks/ExampleUseEffect';
+import ExampleUseLayoutEffect from './Hooks/ExampleUseLayoutEffect';
+import ExampleUseContext from './Hooks/ExampleUseContext';
+import ExampleUseReducer from './Hooks/ExampleUseReducer';
+import ExampleUseMemo from './Hooks/ExampleUseMemo';
+import ExampleUseRef from './Hooks/ExampleUseRef';
+import ExampleUseCallback from './Hooks/ExampleUseCallback';
+import Home from './Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/useState' element={<ExampleUseState />} />
+        <Route path='/useEffect' element={<ExampleUseEffect />} />
+        <Route path='/useLayoutEffect' element={<ExampleUseLayoutEffect />} />
+        <Route path='/useContext' element={<ExampleUseContext />} />
+        <Route path='/useReducer' element={<ExampleUseReducer />} />
+        <Route path='/useMemo' element={<ExampleUseMemo />} />
+        <Route path='/useRef' element={<ExampleUseRef />} />
+        <Route path='/useCallback' element={<ExampleUseCallback />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
