@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useFetch from './Hooks/ExampleCustomHook';
 
 const Home = () => {
   const listOfHooks = [
@@ -11,7 +12,11 @@ const Home = () => {
     'useRef',
     'useMemo',
     'useCallback',
+    'useId',
   ];
+
+  const [data] = useFetch('https://jsonplaceholder.typicode.com/todos');
+
   return (
     <div
       style={{
@@ -30,6 +35,18 @@ const Home = () => {
           ))}
         </ul>
       </div>
+      <br />
+      {/* <div>
+        {data &&
+          data.map((item) => {
+            return (
+              <>
+                <p key={item.id}>{item.title}</p>
+                <br />
+              </>
+            );
+          })}
+      </div> */}
     </div>
   );
 };
