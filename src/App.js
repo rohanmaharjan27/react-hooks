@@ -10,6 +10,7 @@ import ExampleUseRef from './Hooks/ExampleUseRef';
 import ExampleUseCallback from './Hooks/ExampleUseCallback';
 import Home from './Home';
 import ExampleUseId from './Hooks/ExampleUseId';
+import CustomHookList from './Hooks/CustomHookList';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/useRef' element={<ExampleUseRef />} />
         <Route path='/useCallback' element={<ExampleUseCallback />} />
         <Route path='/useId' element={<ExampleUseId />} />
+        <Route path='/CustomHook' element={<CustomHookList />} />
       </Routes>
     </BrowserRouter>
   );

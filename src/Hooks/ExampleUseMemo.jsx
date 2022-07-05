@@ -3,8 +3,11 @@ import { useMemo, useState } from 'react';
 const ExampleUseMemo = () => {
   const [count, setCount] = useState(0);
   const [todos, setTodos] = useState([]);
+
   // const calculation = expensiveCalculation(count);
   const calculation = useMemo(() => expensiveCalculation(count), [count]);
+
+  console.log('calculation', calculation);
 
   const increment = () => {
     setCount((c) => c + 1);

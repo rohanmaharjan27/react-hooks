@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
 const ExampleUseEffect = () => {
-  const [counter, setCounter] = useState(-1);
+  const [counter, setCounter] = useState(0);
   const [value, setValue] = useState('');
 
   useEffect(() => {
     setCounter(counter + 1);
     // eslint-disable-next-line
-  }, [value]);
+  }, []);
 
   const handleInputChange = (e) => {
     let value = e.target.value;

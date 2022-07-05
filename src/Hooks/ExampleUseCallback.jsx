@@ -18,6 +18,8 @@ const ExampleUseCallback = () => {
     // eslint-disable-next-line
   }, [todos]);
 
+  console.log('addTodo', addTodo);
+
   console.log('parent render');
 
   return (
